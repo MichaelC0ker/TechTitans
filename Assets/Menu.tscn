@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://menu-play-btn.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/AegeanHinted.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/Aegean.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+outline_size = 8
+outline_color = Color( 0.0666667, 0.0196078, 0.0196078, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="Menu" type="Control"]
+margin_top = 3.0
+margin_right = 1280.0
+margin_bottom = 723.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0.129412, 0.129412, 0.262745, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 195.0
+margin_top = 247.0
+margin_right = 1077.0
+margin_bottom = 448.0
+custom_fonts/font = SubResource( 1 )
+text = "Simple 3d Game"
+align = 1
+valign = 1
+
+[node name="menu-play-btn" type="Button" parent="."]
+margin_left = 516.0
+margin_top = 492.0
+margin_right = 616.0
+margin_bottom = 562.0
+rect_scale = Vector2( 2.2, 1.8 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 0.00392157, 0.67451, 0.592157, 1 )
+custom_colors/font_color_pressed = Color( 0.145098, 0.882353, 0.392157, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Play"
+flat = true
+script = ExtResource( 1 )
+
+[connection signal="pressed" from="menu-play-btn" to="menu-play-btn" method="_on_menuplaybtn_pressed"]
