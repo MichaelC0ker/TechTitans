@@ -3,3 +3,5 @@ blocksLibrary.tres filter=lfs diff=lfs merge=lfs -text
 *.tscn filter=lfs diff=lfs merge=lfs -text
 .tscn filter=lfs diff=lfs merge=lfs -text
 .tres filter=lfs diff=lfs merge=lfs -text
+.gltf filter=lfs diff=lfs merge=lfs -text
+.gltf.import filter=lfs diff=lfs merge=lfs -text
